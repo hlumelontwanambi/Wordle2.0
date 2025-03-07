@@ -75,7 +75,7 @@ namespace prjWordleAPI.Controllers
                     feedback.Add(new CharacterFeedback
                     {
                         Character = guessedChar,
-                        Feedback = "correct"
+                        Feedback = "Nailed"
                     });
                 }
                 else if (_gameState.TargetWord.Contains(guessedChar))
@@ -83,7 +83,7 @@ namespace prjWordleAPI.Controllers
                     feedback.Add(new CharacterFeedback
                     {
                         Character = guessedChar,
-                        Feedback = "present"
+                        Feedback = "Right letter but its not here"
                     });
                     isCorrect = false;
                 }
@@ -92,7 +92,7 @@ namespace prjWordleAPI.Controllers
                     feedback.Add(new CharacterFeedback
                     {
                         Character = guessedChar,
-                        Feedback = "absent"
+                        Feedback = "oh buddy you missed the mark"
                     });
                     isCorrect = false;
                 }
